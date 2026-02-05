@@ -35,7 +35,7 @@ const FinalCTASection = () => {
             5 semanas que pueden cambiar tu carrera
           </p>
 
-          <a href="#precio" className="cta-primary text-lg px-12 py-5">
+          <a href="https://tally.so/r/pbOEXB" target="_blank" rel="noopener noreferrer" className="cta-primary text-lg px-12 py-5">
             INSCRÍBETE AHORA
           </a>
 

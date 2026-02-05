@@ -81,7 +81,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <a href="#precio" className="cta-primary text-lg">
+            <a href="https://tally.so/r/pbOEXB" target="_blank" rel="noopener noreferrer" className="cta-primary text-lg">
               INSCRÍBETE AHORA
             </a>
           </motion.div>

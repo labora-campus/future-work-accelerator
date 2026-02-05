@@ -41,21 +41,19 @@ const PricingSection = () => {
           <div className="inline-flex bg-white/10 rounded-full p-1 mb-8">
             <button
               onClick={() => setCurrency("USD")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                currency === "USD"
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${currency === "USD"
                   ? "bg-coral text-white"
                   : "text-white/70 hover:text-white"
-              }`}
+                }`}
             >
               USD
             </button>
             <button
               onClick={() => setCurrency("ARS")}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                currency === "ARS"
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${currency === "ARS"
                   ? "bg-coral text-white"
                   : "text-white/70 hover:text-white"
-              }`}
+                }`}
             >
               Pesos Argentinos
             </button>
@@ -138,7 +136,7 @@ const PricingSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <a href="#" className="cta-primary text-lg px-12">
+          <a href="https://tally.so/r/pbOEXB" target="_blank" rel="noopener noreferrer" className="cta-primary text-lg px-12">
             INSCRÍBETE AHORA
           </a>
         </motion.div>

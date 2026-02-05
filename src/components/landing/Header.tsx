@@ -18,11 +18,10 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-charcoal/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -37,7 +36,9 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <a
-            href="#precio"
+            href="https://tally.so/r/pbOEXB"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex cta-primary text-sm py-3 px-6"
           >
             INSCRÍBETE AHORA
@@ -60,7 +61,9 @@ const Header = () => {
             className="md:hidden bg-charcoal border-t border-white/10 py-4"
           >
             <a
-              href="#precio"
+              href="https://tally.so/r/pbOEXB"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full cta-primary text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
