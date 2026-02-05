@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "¿En qué horarios son las clases?",
     answer:
-      "Las clases son los días Martes, Jueves y Viernes. Tenés dos turnos disponibles: Mañana (08:00 - 10:00 hs ARG) y Tarde (19:00 - 21:00 hs ARG). Elegís el que más te convenga.",
+      "Las clases inician el Jueves 19 de Febrero. Se cursa en Turno Noche: Lunes, Jueves y Viernes de 20:00 a 22:00 hs (ARG).",
   },
   {
     question: "¿Cuánto dura el acceso a las grabaciones?",

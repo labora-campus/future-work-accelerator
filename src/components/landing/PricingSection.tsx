@@ -14,7 +14,7 @@ const PricingSection = () => {
       installment: "2 x $125 USD",
     },
     ARS: {
-      single: "AR$345.000",
+      single: "AR$293.250",
       installment: "2 x $172.500",
     },
   };
@@ -42,8 +42,8 @@ const PricingSection = () => {
             <button
               onClick={() => setCurrency("USD")}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${currency === "USD"
-                  ? "bg-coral text-white"
-                  : "text-white/70 hover:text-white"
+                ? "bg-coral text-white"
+                : "text-white/70 hover:text-white"
                 }`}
             >
               USD
@@ -51,8 +51,8 @@ const PricingSection = () => {
             <button
               onClick={() => setCurrency("ARS")}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${currency === "ARS"
-                  ? "bg-coral text-white"
-                  : "text-white/70 hover:text-white"
+                ? "bg-coral text-white"
+                : "text-white/70 hover:text-white"
                 }`}
             >
               Pesos Argentinos

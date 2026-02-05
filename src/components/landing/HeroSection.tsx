@@ -123,6 +123,9 @@ const HeroSection = () => {
             >
               INSCRÍBETE AHORA
             </a>
+            <p className="mt-4 text-white/80 text-sm font-medium">
+              📅 Inicia: Jueves 19 de Febrero | Turno Noche
+            </p>
           </motion.div>
         </div>
       </div>
