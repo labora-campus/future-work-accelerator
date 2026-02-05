@@ -31,9 +31,11 @@ const InstructorsSection = () => {
             className="bg-white rounded-2xl p-8 card-elevated"
           >
             <div className="text-center mb-6">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-coral/30 to-coral/10 border-4 border-coral flex items-center justify-center">
-                <span className="text-5xl font-heading font-bold text-coral">H</span>
-              </div>
+              <img
+                src="/hernan-lamanna-perfil.jpg"
+                alt="Hernán Lamanna"
+                className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-coral object-cover"
+              />
               <h3 className="text-2xl font-heading font-bold text-charcoal">
                 Hernán Lamanna
               </h3>
@@ -82,9 +84,11 @@ const InstructorsSection = () => {
             className="bg-white rounded-2xl p-8 card-elevated"
           >
             <div className="text-center mb-6">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-coral/30 to-coral/10 border-4 border-coral flex items-center justify-center">
-                <span className="text-5xl font-heading font-bold text-coral">B</span>
-              </div>
+              <img
+                src="/brandoncandia.png"
+                alt="Brandon Candia"
+                className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-coral object-cover"
+              />
               <h3 className="text-2xl font-heading font-bold text-charcoal">
                 Brandon Candia
               </h3>

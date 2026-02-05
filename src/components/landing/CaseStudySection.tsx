@@ -20,7 +20,7 @@ const CaseStudySection = () => {
           <div className="bg-charcoal rounded-2xl p-8 md:p-12 relative overflow-hidden">
             {/* Decorative */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-coral/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-2 text-coral mb-6">
                 <Briefcase size={20} />
@@ -31,9 +31,12 @@ const CaseStudySection = () => {
 
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 {/* Photo placeholder */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-coral/30 to-coral/10 border-4 border-coral flex-shrink-0 flex items-center justify-center">
-                  <span className="text-2xl font-heading font-bold text-coral">B</span>
-                </div>
+                {/* Photo */}
+                <img
+                  src="/5041928251730758485.jpg"
+                  alt="Brandon Candia"
+                  className="w-20 h-20 rounded-full border-4 border-coral object-cover flex-shrink-0"
+                />
 
                 <div className="flex-1">
                   <Quote className="text-coral/40 mb-4" size={32} />
