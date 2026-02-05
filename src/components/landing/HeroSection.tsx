@@ -16,7 +16,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="badge-coral mb-6 inline-flex">
+            <span className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-coral/30 bg-coral/10 backdrop-blur-sm text-coral text-sm font-medium">
               <Zap size={16} className="text-coral" />
               PROGRAMA INTENSIVO 5 SEMANAS - ONLINE Y EN VIVO
             </span>
@@ -38,31 +38,53 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-xl md:text-2xl lg:text-3xl font-body italic font-light text-gray-light mb-8"
+            className="text-xl md:text-2xl lg:text-3xl font-body italic font-light text-gray-light mb-12"
           >
             Sin enviar cientos de CVs.
           </motion.p>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-light mb-10 max-w-3xl mx-auto"
-          >
-            El mercado laboral cambió. Los que se destacan{" "}
-            <span className="text-white font-medium">no buscan trabajo, atraen oportunidades.</span>{" "}
-            Te enseñamos cómo.
-          </motion.p>
-
-          {/* Video Embed */}
+          {/* Video Embed with Custom Cover */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative max-w-3xl mx-auto mb-12"
+            className="relative max-w-4xl mx-auto mb-12"
           >
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl relative group bg-charcoal">
+              {/* Custom Cover / Facade */}
+              <div
+                className="absolute inset-0 z-10 cursor-pointer"
+                onClick={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const iframe = e.currentTarget.nextElementSibling as HTMLIFrameElement;
+                  if (iframe) {
+                    iframe.src += "&autoplay=1";
+                  }
+                }}
+              >
+                {/* Thumbnail Image (using og-image as base or a gradient backup) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal/80 to-coral/20">
+                  <img
+                    src="/og-image.png"
+                    alt="Video Thumbnail"
+                    className="w-full h-full object-cover opacity-50 mix-blend-overlay"
+                  />
+                </div>
+
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full bg-coral flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Play size={40} className="text-white ml-2" fill="white" />
+                  </div>
+                </div>
+                <div className="absolute bottom-6 left-0 right-0 text-center">
+                  <p className="text-white font-heading font-semibold text-lg drop-shadow-md">
+                    Mira el video de presentación
+                  </p>
+                </div>
+              </div>
+
+              {/* YouTube Iframe (hidden behind cover until clicked) */}
               <iframe
                 width="100%"
                 height="100%"
@@ -70,18 +92,35 @@ const HeroSection = () => {
                 title="Video de presentación del programa"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                className="w-full h-full"
+                className="w-full h-full relative z-0"
               ></iframe>
             </div>
           </motion.div>
 
-          {/* CTA Button */}
-          <motion.div
+          {/* Description (Moved below video) */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-lg md:text-xl text-gray-light mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            <a href="https://tally.so/r/pbOEXB" target="_blank" rel="noopener noreferrer" className="cta-primary text-lg">
+            El mercado laboral cambió. Los que se destacan{" "}
+            <span className="text-white font-medium">no buscan trabajo, atraen oportunidades.</span>{" "}
+            Este programa es lo que tanto estabas esperando.
+          </motion.p>
+
+          {/* CTA Button (Increased size) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <a
+              href="https://tally.so/r/pbOEXB"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-primary text-xl px-12 py-5 transform hover:scale-105 transition-all shadow-glow"
+            >
               INSCRÍBETE AHORA
             </a>
           </motion.div>
