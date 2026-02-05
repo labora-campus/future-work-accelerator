@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 leading-relaxed"
+            className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 leading-tight md:leading-relaxed"
           >
             ¿Cómo conseguir oportunidades de trabajo usando{" "}
             <span className="text-coral">IA y Creación de Contenido?</span>

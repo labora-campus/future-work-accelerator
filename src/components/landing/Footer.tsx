@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-gray text-sm text-center md:text-right">
-            Trabajo del Futuro 2026 •{" "}
+            Futuro del Trabajo 2026 •{" "}
             <span className="text-white/60">Academia Labora × AyudarteAR</span>
           </p>
         </div>

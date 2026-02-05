@@ -19,15 +19,15 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-charcoal/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+        ? "bg-charcoal/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
             <span className="text-white font-heading font-bold text-lg md:text-xl">
-              Trabajo del Futuro
+              Futuro del Trabajo
             </span>
             <span className="bg-coral text-white text-xs font-semibold px-2 py-0.5 rounded">
               2026
