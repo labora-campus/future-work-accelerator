@@ -90,23 +90,17 @@ const MethodologySection = () => {
               </h3>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 text-center md:text-left">
+            <div className="grid md:grid-cols-2 gap-6 text-center md:text-left">
               <div>
-                <p className="text-white/70 text-sm mb-1">Días</p>
+                <p className="text-white/70 text-sm mb-1">Días de Cursada</p>
                 <p className="text-white font-semibold text-lg">
-                  Martes, Jueves y Viernes
+                  Lunes, Jueves y Viernes
                 </p>
               </div>
               <div>
-                <p className="text-white/70 text-sm mb-1">Turno Mañana</p>
+                <p className="text-white/70 text-sm mb-1">Turno Noche</p>
                 <p className="text-white font-semibold text-lg">
-                  08:00 - 10:00 hs (ARG)
-                </p>
-              </div>
-              <div>
-                <p className="text-white/70 text-sm mb-1">Turno Tarde</p>
-                <p className="text-white font-semibold text-lg">
-                  19:00 - 21:00 hs (ARG)
+                  20:00 - 22:00 hs (ARG)
                 </p>
               </div>
             </div>
