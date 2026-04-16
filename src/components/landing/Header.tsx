@@ -1,78 +1,121 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+const navLinks = [
+  { label: "Inicio", to: "/" },
+  { label: "Bootcamp", to: "/bootcamp" },
+  { label: "Curso On Demand", to: "/curso-on-demand" },
+  { label: "Lives TikTok", to: "/lives-tiktok" },
+  { label: "Streaming", to: "/streaming" },
+  { label: "Eventos", to: "/eventos" },
+];
+
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-charcoal/95 backdrop-blur-md shadow-lg"
-        : "bg-transparent"
-        }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-charcoal/95 backdrop-blur-md shadow-lg border-b border-white/5"
+          : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <span className="text-white font-heading font-bold text-lg md:text-xl">
-              Futuro del Trabajo
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <span className="font-heading font-bold text-white text-base md:text-lg leading-tight">
+              El Club del{" "}
+              <span className="text-coral">Laburo</span>
             </span>
-            <span className="bg-coral text-white text-xs font-semibold px-2 py-0.5 rounded">
-              2026
-            </span>
-          </div>
+          </Link>
 
-          {/* Desktop CTA */}
-          <a
-            href="https://tally.so/r/pbOEXB"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex cta-primary text-sm py-3 px-6"
-          >
-            INSCRÍBETE AHORA
-          </a>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/"}
+                className={({ isActive }) =>
+                  `px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    isActive
+                      ? "text-coral bg-coral/10"
+                      : "text-gray-light hover:text-white hover:bg-white/5"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            className="md:hidden bg-charcoal border-t border-white/10 py-4"
-          >
-            <a
-              href="https://tally.so/r/pbOEXB"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full cta-primary text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+          {/* CTA + Mobile Toggle */}
+          <div className="flex items-center gap-3">
+            <Link
+              to="/bootcamp"
+              className="hidden md:inline-flex cta-primary text-sm px-5 py-2.5"
             >
-              INSCRÍBETE AHORA
-            </a>
-          </motion.div>
-        )}
+              Inscribirse
+            </Link>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
       </div>
-    </motion.header>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden bg-charcoal/98 backdrop-blur-md border-t border-white/10">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/"}
+                className={({ isActive }) =>
+                  `px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                    isActive
+                      ? "text-coral bg-coral/10"
+                      : "text-gray-light hover:text-white hover:bg-white/5"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+            <div className="pt-2 mt-2 border-t border-white/10">
+              <Link
+                to="/bootcamp"
+                className="cta-primary text-sm w-full justify-center"
+              >
+                Inscribirse al Bootcamp
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 };
 
