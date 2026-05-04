@@ -11,6 +11,7 @@ import Streaming from "./pages/Streaming";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import Payment from "./pages/Payment";
+import FreeClass from "./pages/FreeClass";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/streaming" element={<Streaming />} />
           <Route path="/eventos" element={<Events />} />
           <Route path="/pago" element={<Payment />} />
+          <Route path="/clase-gratuita-ia" element={<FreeClass />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
