@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import Payment from "./pages/Payment";
 import FreeClass from "./pages/FreeClass";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <FloatingWhatsApp />
+        <Analytics />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
