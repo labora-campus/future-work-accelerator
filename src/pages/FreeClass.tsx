@@ -56,10 +56,10 @@ const FreeClass = () => {
             >
               <div className="aspect-video bg-black rounded-xl overflow-hidden relative group flex items-center justify-center border border-white/5">
                 <iframe 
-                  src="https://drive.google.com/file/d/1jmsTa7NxhW3-2kejhWCDdXZYJ1a5mMn8/preview" 
+                  src="https://www.youtube.com/embed/EZLdIYIQZL0" 
                   title="Clase Gratuita" 
                   frameBorder="0" 
-                  allow="autoplay; fullscreen" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   allowFullScreen 
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
