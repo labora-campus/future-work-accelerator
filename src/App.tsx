@@ -12,6 +12,7 @@ import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import Payment from "./pages/Payment";
 import FreeClass from "./pages/FreeClass";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/clase-gratuita-ia" element={<FreeClass />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
