@@ -179,14 +179,12 @@ const PricingCTA = ({ variant = "dark" }: { variant?: "dark" | "light" }) => (
       </p>
     </div>
 
-    <a
-      href="https://mpago.la/2cpefDJ"
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to="/carrito-curso"
       className="cta-primary text-lg px-8 py-4 w-full justify-center mb-5 transform hover:scale-105 transition-all shadow-glow"
     >
       COMPRAR AHORA
-    </a>
+    </Link>
 
     <ul className="space-y-2 mb-6">
       {purchaseIncludes.map((item, i) => (
@@ -200,10 +198,8 @@ const PricingCTA = ({ variant = "dark" }: { variant?: "dark" | "light" }) => (
     <div className="border-t border-white/10 pt-5">
       <p className="text-gray text-xs text-center mb-4">También podés pagar por:</p>
       <div className="grid grid-cols-2 gap-3">
-        <a
-          href="https://mpago.la/2cpefDJ"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/carrito-curso"
           className="flex items-center gap-2 bg-white/5 rounded-xl px-4 py-3 hover:bg-white/10 transition-colors"
         >
           <CreditCard size={16} className="text-coral flex-shrink-0" />
@@ -211,7 +207,7 @@ const PricingCTA = ({ variant = "dark" }: { variant?: "dark" | "light" }) => (
             <p className="text-white text-xs font-semibold">MercadoPago</p>
             <p className="text-gray text-xs">Cuotas sin interés</p>
           </div>
-        </a>
+        </Link>
         <div className="flex items-center gap-2 bg-white/5 rounded-xl px-4 py-3">
           <Building size={16} className="text-coral flex-shrink-0" />
           <div>
@@ -781,14 +777,12 @@ const CourseOnDemand = () => {
                 </span>
               </div>
 
-              <a
-                href="https://mpago.la/2cpefDJ"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/carrito-curso"
                 className="cta-primary text-xl px-12 py-5 transform hover:scale-105 transition-all shadow-glow inline-flex mb-5"
               >
                 COMPRAR AHORA
-              </a>
+              </Link>
 
               <p className="text-gray-light text-sm">
                 🔓 Acceso de por vida · 🎓 Certificado oficial

@@ -12,6 +12,8 @@ import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import Payment from "./pages/Payment";
 import FreeClass from "./pages/FreeClass";
+import CartCourse from "./pages/CartCourse";
+import CheckoutCourse from "./pages/CheckoutCourse";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/streaming" element={<Streaming />} />
           <Route path="/eventos" element={<Events />} />
           <Route path="/pago" element={<Payment />} />
+          <Route path="/carrito-curso" element={<CartCourse />} />
+          <Route path="/checkout-curso" element={<CheckoutCourse />} />
           <Route path="/clase-gratuita-ia" element={<FreeClass />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
