@@ -14,6 +14,7 @@ import Payment from "./pages/Payment";
 import FreeClass from "./pages/FreeClass";
 import CartCourse from "./pages/CartCourse";
 import CheckoutCourse from "./pages/CheckoutCourse";
+import SuccessCourse from "./pages/SuccessCourse";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/pago" element={<Payment />} />
           <Route path="/carrito-curso" element={<CartCourse />} />
           <Route path="/checkout-curso" element={<CheckoutCourse />} />
+          <Route path="/compra-exitosa" element={<SuccessCourse />} />
           <Route path="/clase-gratuita-ia" element={<FreeClass />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
